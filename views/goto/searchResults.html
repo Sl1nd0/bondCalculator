@@ -1,0 +1,27 @@
+<div class="container" ng-show = "search">
+	<h1 align="center"> <font color = "Gold"> SEARCH RESULTS </font> </h1> <br><br>
+	
+	<div class="row text-center">
+		 <div class="col-md-4" ng-repeat="search in SEARCH"> 
+		 
+		 <i class="fas fa-calculator fa-7x" id="house"></i>
+		 <br><br>
+		 <h3> <a href = "" ng-click = 'calculate(search)'> <b> <font color="	#FFF0F5"> ==={{search.calcname}}===</font> </b> </a> </h3>
+		 <br><br>
+		 </div>
+	 </div><br><br><br><br><br><br><br>
+	
+   </div>
+   
+   <div class="container" ng-show = "nothing">
+	<h1 align="center"> <font color = "Gold"> SEARCH RESULTS </font> </h1> <br><br>
+	
+	<div class="row text-center">
+		 <div class="col-md-4"> 
+
+		 <h3> <a href = "" ng-click = 'calculate(search)'> <b> <font color="	#FFF0F5"> No results for your search</font> </b> </a> </h3>
+		 <br><br>
+		 </div>
+	 </div><br><br><br><br><br><br><br>
+	
+   </div>

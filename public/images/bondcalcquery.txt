@@ -1,0 +1,11 @@
+CREATE TABLE bondcalculation(
+   calculationID serial PRIMARY KEY,
+   deposit_paid float,
+   purchase_price float,
+   bond_years float,
+   interest_rate float,
+   totalmoney float,
+   monthly_payment float,
+   calculation_name varchar(200),
+   idnumber varchar(13)
+);

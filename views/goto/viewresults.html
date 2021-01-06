@@ -1,0 +1,74 @@
+<div class="container" ng-show = "calculated">
+	<h1 align="center"> <font color = "white">{{calcname}} CALCULATION RESULT </font> </h1> <br>
+	 <h4 align="center"> <b> Monthly Payment </b> </h3><br>
+		
+	<form>
+		
+	<table class="table table-bordered table-responsive table-light"  align = "center">
+     <thead>
+      <tr>
+	 
+        <th><font color = "black">Purchase price </font> </th>
+        <th><font color = "black">Deposit paid</font> </th>
+        <th><font color = "black"> Bond term(years)</font> </th>
+		<th><font color = "black"> Fixed interest Rate </font> </th>
+		<th><font color = "black"> Monthly payment </font> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="monthly in MONTHLY">
+        <td><font color = "black"> {{monthly.pprice}}</font> </td>
+        <td><font color = "black"> {{monthly.depositpaid}}  </font> </td>
+		<td><font color = "black"> {{monthly.bondterm}}  </font> </td>
+		<td><font color = "black"> {{monthly.finterest}}% </font> </td>
+		<td><font color = "black"> {{monthly.monthlypay}}  </font> </td>
+      </tr>
+    </tbody>
+  </table>
+
+	<br><br>
+	
+	<h4 align="center"> <b> Yearly payment vs capital </b> </h3><br>
+   
+  <table class="table table-bordered table-responsive table-light"  align = "center">
+    <thead>
+      <tr>
+	   <th><font color = "black"> Year(s) </font> </th>
+        <th><font color = "black"> Interest (%) </font> </th>
+        <th><font color = "black"> Capital (%)</font> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="percentage in PERCENTAGES">
+        <td><font color = "black">{{percentage.year}} </font> </td>
+        <td><font color = "black"> {{percentage.interesty}} </font> </td>
+        <td><font color = "black">{{percentage.capitaly}} </font> </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+	
+ <h4> <font color = "white"> TOTAL PAID INTEREST :  {{interest}} </font> </h4><br>
+     
+  <h4 align="center"> <b> Yearly payment vs capital bar graph </b> </h3><br>
+  			<canvas id="bar" class="chart chart-bar"
+		  chart-data="data" chart-labels="labels" chart-series="series">
+		     
+</canvas>
+ <h6 align = "center"> <font color = "white"><b> Year(s) </b></font></h6>
+<br> <br>
+  <div class = "col-md-5">
+  <label for="myid"> <font color = "white"><b> ID NUMBER </b></font></label>
+  <input type="number" ng-model="idnum"  class="form-control form-control">
+  </div>
+  <button type="button"  ng-click = "goBack()" class="btn btn-primary">CANCEL</button>
+  <button type="button" ng-click = "saveCalculation()" class="btn btn-primary"> SAVE CALCULATION </button>
+  </form>
+   </div><br><br><br><br><br>
+  
+ <div class="container" ng-show = "nothing">
+ 
+ <h1 align="center"> <font color = "white">{{calcname}} CALCULATION RESULT </font> </h1> <br>
+	 <h4 align="center"> <b> NOTHING WAS CALCULATED </b> </h3><br><br><br><br><br><br><br><br>
+ 
+ </div>

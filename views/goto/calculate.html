@@ -1,0 +1,25 @@
+ <div class="container">
+ <h2 align="center"> <font color = "white">CALCULATE LOAN PAYMENT FOR BOND </font> </h2><br>
+	<div class="row">
+	  <div class="col-md-4">
+
+		<label for="price"> <font color = "white"> purchase price </font></label>
+		<input type="number" ng-model="pprice" class="form-control form-control">
+		<label for="deposit"> <font color = "white"> deposit paid </font></label>
+		<input type="number" ng-model="depositpaid"  class="form-control form-control">
+		<label for="bondterm"> <font color = "white"> bond term in years </font></label>
+		<input type="number"ng-model="bondterm"  class="form-control form-control">
+		<label for="fixedinterest"> <font color = "white"> fixed interest rate </font></label>
+		<input type="number" ng-model="finterests"  class="form-control form-control">
+		</div>
+	
+		<div class="col-md-5">
+		<label for="email"> <font color = "gold"> calculation name </font></label>
+		<input type="text" ng-model="calcname" class="form-control form-control">
+		<button type="button" ng-click="calculate()" class="btn btn-primary">CALCULATE</button>
+		<button type="button" ng-click="goBack()" class="btn btn-primary">CANCEL</button>
+		</div>
+		
+	</div>
+    </div>
+	
